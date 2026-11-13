@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Painel — Indress</title>
+  <meta name="theme-color" content="#0d0d0f" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    body{background:var(--bone)}
+    .a-top{position:sticky;top:0;z-index:30;background:var(--ink);color:#fff}
+    .a-top .wrap{height:60px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .a-top .logo{font-size:20px}
+    .a-top .logo small{font-family:var(--f-body);font-weight:600;font-size:11px;letter-spacing:.12em;opacity:.6;margin-left:10px;font-stretch:100%}
+    .a-top a.view{font-size:13px;font-weight:600;opacity:.85;display:flex;gap:6px;align-items:center;height:40px;padding:0 14px;border:1px solid rgba(255,255,255,.25);border-radius:99px}
+    .tabs{display:flex;gap:6px;background:var(--white);padding:5px;border-radius:99px;margin:18px 0 14px;width:max-content;box-shadow:var(--shadow-1)}
+    .tab{height:40px;padding:0 18px;border-radius:99px;font-weight:700;font-size:14px}
+    .tab[aria-selected="true"]{background:var(--ink);color:#fff}
+    .banner{background:#fff4d6;border:1px solid #f3dc9c;color:#6b5000;border-radius:14px;padding:12px 14px;font-size:13.5px;margin-top:14px;display:flex;gap:10px}
+    .banner.warn{background:var(--accent-soft);border-color:#ffc2d1;color:var(--accent-ink)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+    .stat{background:var(--white);border-radius:16px;padding:14px;box-shadow:var(--shadow-1)}
+    .stat b{display:block;font-family:var(--f-display);font-size:26px;font-weight:900;line-height:1}
+    .stat span{font-size:12px;color:var(--muted);font-weight:600}
+    .list{display:grid;gap:10px;padding-bottom:110px}
+    .row{background:var(--white);border-radius:18px;padding:10px;display:grid;grid-template-columns:72px 1fr auto;gap:12px;align-items:center;box-shadow:var(--shadow-1)}
+    .row img{width:72px;height:90px;border-radius:12px;object-fit:cover;background:var(--bone)}
+    .row h3{font-size:15px;font-weight:700;line-height:1.25}
+    .row .sub{font-size:12.5px;color:var(--muted);margin-top:2px}
+    .row .price{margin-top:4px}
+    .row-actions{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+    .pill{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:4px 8px;border-radius:7px}
+    .pill.on{background:#dcf7e6;color:#126b37}
+    .pill.off{background:#eee;color:#555}
+    .mini{height:38px;padding:0 14px;border-radius:99px;border:1.5px solid var(--line);font-weight:700;font-size:13px;background:var(--white)}
+    .mini:hover{border-color:var(--ink)}
+    .fab-add{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(18px + env(safe-area-inset-bottom));z-index:35;box-shadow:var(--shadow-2)}
+    .a-search{margin-bottom:12px}
+    /* form */
+    .form{padding:22px 20px 120px;max-width:720px;margin:0 auto}
+    .form h2{font-family:var(--f-display);font-weight:900;font-stretch:115%;text-transform:uppercase;font-size:26px;margin-bottom:16px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field select{border:1.5px solid var(--line);border-radius:12px;background:var(--white);padding:12px 14px;font-size:15px}
+    .field .hint{font-size:12px;color:var(--muted)}
+    .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    @media(min-width:640px){.photos{grid-template-columns:repeat(4,1fr)}}
+    .ph{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:var(--bone)}
+    .ph img{width:100%;height:100%;object-fit:cover}
+    .ph .cover{position:absolute;left:6px;top:6px;background:var(--ink);color:#fff;font-size:10px;font-weight:800;padding:3px 7px;border-radius:6px;letter-spacing:.06em}
+    .ph .ph-act{position:absolute;inset:auto 6px 6px 6px;display:flex;gap:6px;justify-content:space-between}
+    .ph .ph-act button{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;font-size:15px;box-shadow:var(--shadow-1)}
+    .ph.loading::after{content:"Enviando…";position:absolute;inset:0;display:grid;place-items:center;background:rgba(255,255,255,.75);font-size:12px;font-weight:700}
+    .ph-add{aspect-ratio:3/4;border-radius:14px;border:2px dashed #cfc6ba;display:grid;place-items:center;text-align:center;font-weight:700;font-size:13px;color:var(--muted);cursor:pointer;background:var(--white);padding:8px}
+    .ph-add:hover{border-color:var(--ink);color:var(--ink)}
+    .ph-add .icon{margin:0 auto 4px}
+    .toggles{display:grid;gap:10px}
+    .toggle{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--white);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px}
+    .toggle b{font-size:14.5px}.toggle small{display:block;color:var(--muted);font-size:12.5px}
+    .switch{position:relative;width:52px;height:30px;flex:none}
+    .switch input{opacity:0;width:0;height:0}
+    .switch span{position:absolute;inset:0;background:#d8d1c7;border-radius:99px;transition:.2s}
+    .switch span::after{content:"";position:absolute;width:24px;height:24px;border-radius:50%;background:#fff;top:3px;left:3px;transition:.2s var(--ease);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+    .switch input:checked+span{background:var(--ok)}
+    .switch input:checked+span::after{transform:translateX(22px)}
+    .taginput{display:flex;flex-wrap:wrap;gap:6px;border:1.5px solid var(--line);border-radius:12px;background:var(--white);padding:8px}
+    .taginput:focus-within{border-color:var(--ink)}
+    .taginput .t{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:#fff;border-radius:8px;padding:6px 8px 6px 10px;font-size:13px;font-weight:600}
+    .taginput .t button{color:#fff;opacity:.7;font-size:15px;line-height:1}
+    .taginput input{border:0!important;outline:0;flex:1;min-width:110px;padding:6px!important;background:none}
+    .presets{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+    .presets button{height:32px;padding:0 12px;border-radius:99px;border:1.5px dashed #cfc6ba;font-size:12.5px;font-weight:700;color:var(--muted)}
+    .presets button:hover{border-color:var(--ink);color:var(--ink)}
+    .savebar{position:sticky;bottom:0;background:linear-gradient(transparent,var(--paper) 30%);padding:18px 0 calc(14px + env(safe-area-inset-bottom));display:flex;gap:10px}
+    .savebar .btn{flex:1}
+    .danger{color:var(--accent-ink);font-weight:700;font-size:14px;text-decoration:underline;margin-top:18px;display:block}
+    .login{min-height:100dvh;display:grid;place-items:center;padding:20px;background:var(--ink)}
+    .login-card{background:var(--paper);border-radius:var(--radius-l);padding:32px 24px;width:min(400px,100%);box-shadow:var(--shadow-2)}
+    .login-card .logo{font-size:30px;margin-bottom:4px}
+    .login-card p{color:var(--muted);font-size:14px;margin-bottom:22px}
+    #formSheet{max-height:100dvh;height:100dvh;border-radius:0;background:var(--paper)}
+    @media(min-width:900px){#formSheet{height:auto;max-height:92vh;border-radius:var(--radius-l);width:min(760px,94vw)}}
+  </style>
+</head>
+<body>
+  <!-- LOGIN -->
+  <div class="login" id="loginView">
+    <form class="login-card" id="loginForm">
+      <div class="logo">IN DRESS<i></i></div>
+      <p>Painel da loja — entre para gerenciar seus produtos.</p>
+      <div class="field">
+        <label for="pw">Senha</label>
+        <input id="pw" type="password" autocomplete="current-password" required placeholder="Sua senha do painel" />
+      </div>
+      <button class="btn btn-dark btn-block" type="submit">Entrar</button>
+      <p class="small" id="loginHint" style="margin:14px 0 0;text-align:center"></p>
+    </form>
+  </div>
+
+  <!-- APP -->
+  <div id="appView" hidden>
+    <header class="a-top">
+      <div class="wrap">
+        <div class="logo">IN DRESS<i></i><small>PAINEL</small></div>
+        <div style="display:flex;gap:8px"><a class="view" href="../" target="_blank">Ver site ↗</a><button class="view" onclick="logout()" style="color:#fff">Sair</button></div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div id="banners"></div>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-tab="products">Produtos</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="settings">Configurações</button>
+      </div>
+
+      <section id="tab-products">
+        <div class="stats" id="stats"></div>
+        <label class="search a-search"><span data-icon="search"></span><input id="aq" type="search" placeholder="Buscar produto…" /></label>
+        <div class="list" id="list"></div>
+        <button class="btn btn-accent fab-add" id="newBtn"><span data-icon="plus"></span>Novo produto</button>
+      </section>
+
+      <section id="tab-settings" hidden>
+        <form class="form" id="settingsForm" style="padding:6px 0 120px;max-width:none">
+          <div class="field"><label for="sWa">WhatsApp da loja (com DDD)</label>
+            <input id="sWa" inputmode="tel" placeholder="Ex: (27) 99999-9999" />
+            <span class="hint">É para este número que os pedidos chegam.</span></div>
+          <div class="grid2">
+            <div class="field"><label for="sName">Nome da loja</label><input id="sName" /></div>
+            <div class="field"><label for="sIg">Instagram</label><input id="sIg" placeholder="use.indress" /></div>
+          </div>
+          <div class="field"><label for="sHero">Título principal</label><input id="sHero" maxlength="40" /><span class="hint">A última palavra aparece com contorno.</span></div>
+          <div class="field"><label for="sHeroText">Texto de apresentação</label><textarea id="sHeroText" rows="3" maxlength="220"></textarea></div>
+          <div class="field"><label for="sCity">Cidade / observação no rodapé (opcional)</label><input id="sCity" placeholder="Ex: Serra – ES · Enviamos para todo o Brasil" /></div>
+          <div class="field"><label>Categorias</label><div class="taginput" id="sCats"></div><span class="hint">Digite e aperte Enter para adicionar.</span></div>
+          <div class="savebar"><button class="btn btn-dark" type="submit">Salvar configurações</button></div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <section class="sheet" id="formSheet" role="dialog" aria-modal="true" aria-label="Editar produto">
+    <div class="sheet-body" id="formBody"></div>
+  </section>
+
+  <script src="../js/shared.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

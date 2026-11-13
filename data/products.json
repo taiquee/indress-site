@@ -1,0 +1,367 @@
+{
+ "settings": {
+  "storeName": "In Dress",
+  "whatsapp": "5527998406685",
+  "instagram": "use.indress",
+  "heroTitle": "Conforto que vira estilo",
+  "heroText": "Moda feminina para mulheres reais: fitness, íntimo e peças que unem conforto e elegância. Escolha suas peças e finalize direto no WhatsApp.",
+  "categories": [
+   "Conjuntos",
+   "Macaquinhos",
+   "Macacões",
+   "Plus Size"
+  ],
+  "city": "Espírito Santo"
+ },
+ "products": [
+  {
+   "id": "ig01",
+   "name": "Conjunto Candy",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "O queridinho do momento nesse tom candy.",
+   "sizes": [
+    "M"
+   ],
+   "colors": [],
+   "images": [],
+   "available": true,
+   "featured": true,
+   "createdAt": "2026-11-13T12:00:00.000Z",
+   "ig": 1
+  },
+  {
+   "id": "ig03",
+   "name": "Macaquinho Canelado",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Macaquinhos",
+   "description": "Tecido canelado que abraça o corpo e uma cor de tirar o fôlego. Última peça.",
+   "sizes": [
+    "M/G"
+   ],
+   "colors": [],
+   "images": [],
+   "available": true,
+   "featured": true,
+   "createdAt": "2026-11-12T12:00:00.000Z",
+   "ig": 3
+  },
+  {
+   "id": "ig04",
+   "name": "Conjunto Desejo Amarelo",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "O conjunto desejo dessa coleção. Simplesmente impecável.",
+   "sizes": [
+    "G (40/42)"
+   ],
+   "colors": [
+    "Amarelo"
+   ],
+   "images": [],
+   "available": true,
+   "featured": true,
+   "createdAt": "2026-11-11T12:00:00.000Z",
+   "ig": 4
+  },
+  {
+   "id": "ig05",
+   "name": "Conjunto Frente Única",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "Modelo frente única num tom que está super em alta.",
+   "sizes": [
+    "GG (42/44)"
+   ],
+   "colors": [],
+   "images": [],
+   "available": true,
+   "featured": true,
+   "createdAt": "2026-11-10T12:00:00.000Z",
+   "ig": 5
+  },
+  {
+   "id": "ig06",
+   "name": "Conjunto Bicolor",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "O conjunto perfeito bicolor, para um look cheio de estilo. Peça única.",
+   "sizes": [
+    "M"
+   ],
+   "colors": [],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-09T12:00:00.000Z",
+   "ig": 6
+  },
+  {
+   "id": "ig09",
+   "name": "Conjunto Rosa & Caramelo",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "Aquele conjunto de tirar o fôlego.",
+   "sizes": [
+    "M",
+    "G"
+   ],
+   "colors": [
+    "Rosa (M)",
+    "Caramelo (G)"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-08T12:00:00.000Z",
+   "ig": 9
+  },
+  {
+   "id": "ig10",
+   "name": "Conjunto Canelado",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "O conjunto canelado perfeito existe.",
+   "sizes": [
+    "M"
+   ],
+   "colors": [],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-07T12:00:00.000Z",
+   "ig": 10
+  },
+  {
+   "id": "ig11",
+   "name": "Conjunto Detalhes",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "Aquele conjunto em que os detalhes fazem toda a diferença. Última peça.",
+   "sizes": [
+    "M"
+   ],
+   "colors": [],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-06T12:00:00.000Z",
+   "ig": 11
+  },
+  {
+   "id": "ig12",
+   "name": "Macacão Petróleo",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Macacões",
+   "description": "Conforto, funcionalidade e estilo em uma só peça.",
+   "sizes": [
+    "M"
+   ],
+   "colors": [
+    "Petróleo"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-05T12:00:00.000Z",
+   "ig": 12
+  },
+  {
+   "id": "ig13",
+   "name": "Conjunto Uva & Marinho",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "O look que faz a gente querer ir treinar só pra usar.",
+   "sizes": [],
+   "colors": [
+    "Uva",
+    "Marinho"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-04T12:00:00.000Z",
+   "ig": 13
+  },
+  {
+   "id": "ig14",
+   "name": "Conjunto Bicolor Marinho & Off-white",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "A combinação do marinho com off-white traz um detalhe moderno e super elegante.",
+   "sizes": [],
+   "colors": [
+    "Marinho/Off-white"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-03T12:00:00.000Z",
+   "ig": 14
+  },
+  {
+   "id": "ig15",
+   "name": "Conjunto Plus Size Alta Compressão",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Plus Size",
+   "description": "Conforto, estilo e aquele caimento que valoriza. Alta compressão para treinar com segurança.",
+   "sizes": [],
+   "colors": [],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-02T12:00:00.000Z",
+   "ig": 15
+  },
+  {
+   "id": "ig17",
+   "name": "Conjunto Canelado Marrom & Pink",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "Tecido canelado e modelagem que valoriza o corpo.",
+   "sizes": [
+    "P",
+    "M"
+   ],
+   "colors": [
+    "Marrom (P)",
+    "Pink (M)"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-01T12:00:00.000Z",
+   "ig": 17
+  },
+  {
+   "id": "ig22",
+   "name": "Macacão Recortes",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Macacões",
+   "description": "Para quem gosta de peças que chamam atenção pelos detalhes. Recortes modernos.",
+   "sizes": [],
+   "colors": [],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-01T12:00:00.000Z",
+   "ig": 22
+  },
+  {
+   "id": "ig23",
+   "name": "Conjunto Petróleo & Off-white",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "O contraste do azul petróleo com off-white faz deste um look que chama atenção.",
+   "sizes": [],
+   "colors": [
+    "Petróleo/Off-white"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-01T12:00:00.000Z",
+   "ig": 23
+  },
+  {
+   "id": "ig24",
+   "name": "Conjunto Calça Marinho Plus Size",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Plus Size",
+   "description": "Nosso conjunto de calça na cor marinho também em Plus Size.",
+   "sizes": [],
+   "colors": [
+    "Marinho"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-01T12:00:00.000Z",
+   "ig": 24
+  },
+  {
+   "id": "ig25",
+   "name": "Conjunto Cappuccino",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "Um tom apaixonante e modelagem feita para valorizar o corpo.",
+   "sizes": [],
+   "colors": [
+    "Cappuccino"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-01T12:00:00.000Z",
+   "ig": 25
+  },
+  {
+   "id": "ig27",
+   "name": "Conjunto Preto Minimalista",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "Aquele conjunto que faz você se sentir linda antes mesmo de começar o treino.",
+   "sizes": [],
+   "colors": [
+    "Preto"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-01T12:00:00.000Z",
+   "ig": 27
+  },
+  {
+   "id": "ig28",
+   "name": "Conjunto Marrom",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "Marrom é aquele clássico que nunca sai de moda. Modelagem confortável.",
+   "sizes": [],
+   "colors": [
+    "Marrom"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-01T12:00:00.000Z",
+   "ig": 28
+  },
+  {
+   "id": "ig29",
+   "name": "Conjunto Azul Marinho",
+   "price": 0,
+   "promoPrice": null,
+   "category": "Conjuntos",
+   "description": "Tecido de compressão e modelagem confortável. Atemporal.",
+   "sizes": [],
+   "colors": [
+    "Marinho"
+   ],
+   "images": [],
+   "available": true,
+   "featured": false,
+   "createdAt": "2026-11-01T12:00:00.000Z",
+   "ig": 29
+  }
+ ]
+}

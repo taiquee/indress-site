@@ -1,0 +1,10 @@
+{
+  "name": "indress-loja",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Loja Indress — vitrine com pedidos via WhatsApp e painel de produtos",
+  "dependencies": {
+    "@vercel/blob": "^1.0.0"
+  }
+}
