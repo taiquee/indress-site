@@ -12,7 +12,7 @@ const GH = (() => {
   const m = location.hostname.match(/^([\w-]+)\.github\.io$/);
   if (!m) return null;
   const repo = location.pathname.split("/").filter(Boolean)[0];
-  return { owner: m[1], repo: repo && repo !== "admin" ? repo : `${m[1]}.github.io`, branch: "main" };
+  return { owner: m[1], repo: repo && repo !== "admin" ? repo : `${m[1]}.github.io`, branch: "gh-pages" };
 })();
 const DATA_PATH = "data/products.json";
 
@@ -189,7 +189,7 @@ function placeholder(seedText = "indress", i = 0) {
   <rect width='300' height='400' fill='url(#g)'/>
   <circle cx='${220 - (h % 80)}' cy='${110 + (h % 60)}' r='90' fill='${fg}' opacity='.12'/>
   <path d='M118 120c8-14 56-14 64 0l14 40-14 10-6-20v120h-52V150l-6 20-14-10z' fill='${fg}' opacity='.18'/>
-  <text x='150' y='360' font-family='Arial Black,Arial' font-weight='900' font-size='22' text-anchor='middle' fill='${fg}' opacity='.45' letter-spacing='4'>INDRESS</text>
+  <text x='150' y='360' font-family='Arial Black,Arial' font-weight='900' font-size='22' text-anchor='middle' fill='${fg}' opacity='.45' letter-spacing='4'>IN DRESS</text>
   </svg>`;
   return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
 }
